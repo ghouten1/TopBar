@@ -7,8 +7,7 @@
 --[LOCALS]--
 
 local Icon = require(game:GetService("ReplicatedStorage").Icon) -- Getting Icon Module
-local Themes = require(game:GetService("ReplicatedStorage").Icon.Themes) -- Getting Themes
-StarterGui
+local Themes = require(game:GetService("ReplicatedStorage").Icon.Themes) -- Getting Themes StarterGui 
 local StarterGui = game.Players.LocalPlayer.PlayerGui:WaitForChild("Your gui name") -- If you have 2 than copy local StarterGui and Local Frame and put 1 after
 local Frame = StarterGui:WaitForChild("Your frame name")
 
@@ -20,10 +19,11 @@ Icon.new()
 	:setTip("Open Twitter (T)") -- Tip Here
 	:bindToggleKey(Enum.KeyCode.T) -- Bind Toggle Key
 	:setTheme(Themes.VibeGradient) -- Setting Theme Here
-	:setCaption("Twitter Codes") -- Caption Here
-	:bindEvent("selected", function() -- tween in
-		Frame.Visible = true -- if you have 2 gui than copy this, icon.new() and put 1 after Frame so that gonnbe like this Frame1.Visible = true and Frame1.Visible = false--
+	:setCaption("Your text") -- Caption Here
+	:bindEvent("selected", function() 
+		Frame.Visible = true -- if you have 2 gui than copy this, icon.new() and put 1 after Frame so that gonnbe like this Frame1.Visible = true and Frame1.Visible = false
 	end)
-	:bindEvent("deselected", function() -- tween out
+	:bindEvent("deselected", function() 
 		Frame.Visible = false
-end)
+end) 
+
