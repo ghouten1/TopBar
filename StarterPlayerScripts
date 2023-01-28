@@ -1,0 +1,29 @@
+-- you need to have icon in you ReplicatedStorage. if you don't have it than go to this https://1foreverhd.github.io/TopbarPlus/installation/ for Installation--
+--Put Icon in ReplicatedStorage
+--Put this in StarterPlayer - StarterPlayerScripts-- 
+
+
+
+--[LOCALS]--
+
+local Icon = require(game:GetService("ReplicatedStorage").Icon) -- Getting Icon Module
+local Themes = require(game:GetService("ReplicatedStorage").Icon.Themes) -- Getting Themes
+StarterGui
+local StarterGui = game.Players.LocalPlayer.PlayerGui:WaitForChild("Your gui name") -- If you have 2 than copy local StarterGui and Local Frame and put 1 after
+local Frame = StarterGui:WaitForChild("Your frame name")
+
+Icon.new()
+  :setImage(12298158914) -- Image Icon Here 
+	:setLabel("", "deselected") -- Closed Here
+	:setLabel("Opened", "selected") -- Open Frame Here
+	:setLabel("Hovering", "hovering") -- Hovering Here
+	:setTip("Open Twitter (T)") -- Tip Here
+	:bindToggleKey(Enum.KeyCode.T) -- Bind Toggle Key
+	:setTheme(Themes.VibeGradient) -- Setting Theme Here
+	:setCaption("Twitter Codes") -- Caption Here
+	:bindEvent("selected", function() -- tween in
+		Frame.Visible = true -- if you have 2 gui than copy this, icon.new() and put 1 after Frame so that gonnbe like this Frame1.Visible = true and Frame1.Visible = false--
+	end)
+	:bindEvent("deselected", function() -- tween out
+		Frame.Visible = false
+end)
