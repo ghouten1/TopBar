@@ -8,6 +8,8 @@
 
 local Icon = require(game:GetService("ReplicatedStorage").Icon) -- Getting Icon Module
 local Themes = require(game:GetService("ReplicatedStorage").Icon.Themes) -- Getting Themes StarterGui 
+
+
 local StarterGui = game.Players.LocalPlayer.PlayerGui:WaitForChild("Your gui name") -- If you have 2 than copy local StarterGui and Local Frame and put 1 after
 local Frame = StarterGui:WaitForChild("Your frame name")
 
